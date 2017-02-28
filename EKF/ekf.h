@@ -251,6 +251,7 @@ private:
 	Vector2f _last_known_posNE;     // last known local NE position vector (m)
 	float _last_disarmed_posD;      // vertical position recorded at arming (m)
 	float _last_dt_overrun;		// the amount of time the last IMU collection over-ran the target set by FILTER_UPDATE_PERIOD_MS (sec)
+	uint64_t _delta_time_baro_us;	// delta time between two consecutive delayed baro samples from the buffer (usec)
 
 	Vector3f _earth_rate_NED;	// earth rotation vector (NED) in rad/s
 

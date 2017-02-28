@@ -703,7 +703,7 @@ void Ekf::fixCovarianceErrors()
 		}
 
 		// calculate accel bias term aligned with the gravity vector
-		float dVel_bias_lim = 0.95f * _params.acc_bias_lim * _dt_ekf_avg;
+		float dVel_bias_lim = 0.9f * _params.acc_bias_lim * _dt_ekf_avg;
 		float down_dvel_bias = 0.0f;
 		for (uint8_t axis_index=0; axis_index < 3; axis_index++) {
 			down_dvel_bias += _state.accel_bias(axis_index) * _R_to_earth(2,axis_index);
